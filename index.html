@@ -1,218 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mechanical engineering portfolio of Pratik Maligouda, focused on vehicle integration, CAD design, weight management and FEM analysis.">
-  <meta name="theme-color" content="#101a2b">
-  <title>Pratik Maligouda | Mechanical Engineering Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pratik Maligouda | Mechanical Design & Vehicle Integration</title>
+<meta name="description" content="Mechanical engineering portfolio focused on vehicle integration, mass-property analysis, CAD design and simulation.">
+<style>
+:root{--ink:#141414;--muted:#646a70;--line:#e1e3e5;--soft:#f5f6f7;--red:#e82127;--white:#fff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.65 Inter,Arial,sans-serif;background:var(--white)}
+a{color:inherit} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:9}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:70px}.brand{font-weight:800;letter-spacing:-.04em;text-decoration:none}.brand span{color:var(--red)}
+nav{display:flex;gap:22px;flex-wrap:wrap}nav a{text-decoration:none;font-size:13px;color:var(--muted)}nav a:hover{color:var(--red)}
+.hero{padding:100px 0 78px;background:linear-gradient(135deg,#fff 0%,#f6f6f6 100%);border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--red)}
+h1{font-size:clamp(42px,7vw,82px);line-height:.99;letter-spacing:-.065em;max-width:900px;margin:18px 0 22px}
+h2{font-size:clamp(28px,4vw,44px);line-height:1.08;letter-spacing:-.045em;margin:10px 0 18px}
+h3{font-size:21px;line-height:1.2;letter-spacing:-.025em;margin:7px 0 12px}
+.lead{font-size:20px;line-height:1.55;color:#4e5358;max-width:790px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.btn{display:inline-block;padding:12px 17px;border:1px solid var(--ink);text-decoration:none;font-weight:700;font-size:13px}.btn.primary{background:var(--red);border-color:var(--red);color:white}.btn:hover{transform:translateY(-1px)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);max-width:760px;border:1px solid var(--line);margin-top:38px;background:white}
+.metric{padding:20px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric strong{display:block;font-size:25px;letter-spacing:-.04em}.metric span{font-size:12px;color:var(--muted)}
+section{padding:76px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.section-head p{max-width:490px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{border:1px solid var(--line);padding:25px;background:#fff;display:flex;flex-direction:column;min-height:300px}
+.card .num{font-size:12px;color:var(--red);font-weight:800;letter-spacing:.1em}.meta{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:20px}.tag{background:var(--soft);padding:5px 9px;font-size:11px;color:#444}
+.details{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}.details summary{font-weight:700;font-size:13px;cursor:pointer}
+figure{margin:20px 0 0}.figure-placeholder{border:1px dashed #aeb3b8;background:repeating-linear-gradient(135deg,#f7f7f7,#f7f7f7 10px,#efefef 10px,#efefef 20px);min-height:160px;display:grid;place-items:center;text-align:center;padding:22px;color:#555;font-size:13px}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line)}figcaption{font-size:12px;color:var(--muted);margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:38px}.panel{background:var(--soft);padding:25px;border:1px solid var(--line)}
+ul{padding-left:20px}li{margin:8px 0}.formula{background:#161616;color:#fff;padding:18px;font:16px/1.6 Georgia,serif;overflow:auto}
+.small{font-size:13px;color:var(--muted)}.notice{border-left:3px solid var(--red);padding:13px 17px;background:#fff2f2;font-size:13px}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{border-top:2px solid var(--ink);padding:16px 0}.skill p{color:var(--muted);font-size:14px}
+footer{padding:40px 0;background:#111;color:white}footer a{color:white}footer .muted{color:#b8bdc1}
+@media(max-width:720px){.nav{align-items:flex-start;padding:17px 0;flex-direction:column}nav{gap:13px}.hero{padding:68px 0 52px}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.grid,.two,.skill-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}section{padding:55px 0}}
+@media print{header,.actions{display:none}.hero,section{padding:30px 0}.card{break-inside:avoid}}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="Pratik Maligouda home">
-        <span class="brand-mark">PM</span>
-        <span>Pratik Maligouda<span class="brand-sub">Mechanical Engineering</span></span>
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a class="nav-contact" href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section id="home" class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Mechanical Engineer · Germany</p>
-        <h1>Engineering ideas into <span>practical solutions.</span></h1>
-        <p class="hero-lead">Mechanical engineer with 2+ years of experience in commercial vehicle integration, weight management, centre-of-gravity analysis and CAD-based engineering workflows.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-          <a class="button button-ghost" href="#contact">Get in touch</a>
-        </div>
-        <div class="hero-facts">
-          <div><strong>2+ years</strong><span>Vehicle integration experience</span></div>
-          <div><strong>15+ variants</strong><span>Weight compliance checks referenced in CV</span></div>
-          <div><strong>CATIA · SolidWorks</strong><span>CAD and design tools</span></div>
-        </div>
-        <p class="hero-note">Portfolio based on CV information. Project evidence and detailed results will be added when available.</p>
-      </div>
-      <div class="hero-ornament" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="core"><span>ME</span></div>
-        <span class="orbit-label label-a">CAD</span><span class="orbit-label label-b">FEA</span><span class="orbit-label label-c">VEHICLE</span>
-      </div>
-    </section>
-
-    <section id="about" class="section section-light">
-      <div class="container two-column">
-        <div>
-          <p class="eyebrow eyebrow-dark">01 / About</p>
-          <h2>Engineering mindset.<br><span class="text-muted">Structured problem-solving.</span></h2>
-        </div>
-        <div class="about-copy">
-          <p>I am a mechanical engineer with experience in vehicle integration at MAN Truck & Bus, including weight compliance, centre-of-gravity calculations, payload analysis and cross-functional engineering support.</p>
-          <p>I am currently pursuing an M.Sc. in Advanced Engineering & Engineering Management at South Westphalia University of Applied Sciences. My interests include automotive engineering, mechanical design, simulation and manufacturing systems.</p>
-          <div class="tag-list"><span>Vehicle Integration</span><span>Weight Management</span><span>CoG Analysis</span><span>CAD Modelling</span><span>FEM Analysis</span><span>GD&amp;T</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section section-dark">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">02 / Selected work</p><h2>Projects &amp; workstreams</h2></div>
-          <p class="section-intro">Six workstreams identified from my CV. Some professional workstreams may overlap within the same projects. No confidential drawings, vehicle data or unverified results are included.</p>
-        </div>
-        <div class="filters" role="group" aria-label="Filter projects">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All work</button>
-          <button class="filter-btn" data-filter="automotive" aria-pressed="false">Automotive</button>
-          <button class="filter-btn" data-filter="cad" aria-pressed="false">CAD &amp; design</button>
-          <button class="filter-btn" data-filter="simulation" aria-pressed="false">Simulation</button>
-          <button class="filter-btn" data-filter="academic" aria-pressed="false">Academic</button>
-        </div>
-        <div class="project-grid">
-          <article class="project-card" data-category="automotive">
-            <div class="project-visual visual-truck"><span class="visual-label">VEHICLE INTEGRATION</span><div class="truck-illustration" aria-hidden="true"><span class="truck-cab"></span><span class="truck-body"></span><span class="truck-wheel wheel-one"></span><span class="truck-wheel wheel-two"></span><span class="truck-wheel wheel-three"></span></div><span class="visual-index">01</span></div>
-            <div class="project-body"><div class="project-meta"><span>MAN Truck &amp; Bus</span><span>2023–2025</span></div><h3>Vehicle weight compliance</h3><p>Quarterly weight compliance checks for 15+ commercial truck variants across four concurrent projects, using CATIA V5, Excel VBA, Windchill PLM and EZIS.</p><div class="project-tags"><span>Weight Management</span><span>Excel VBA</span><span>PLM</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> managed recurring weight compliance checks across multiple variants and projects.</p><p><strong>Evidence to add:</strong> a public-safe workflow diagram, a recreated illustrative calculation, and any approved visuals.</p><p><strong>Results:</strong> no quantitative outcome beyond the scope described above has been supplied yet.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-
-          <article class="project-card" data-category="automotive">
-            <div class="project-visual visual-balance"><span class="visual-label">MASS PROPERTIES</span><div class="balance-art" aria-hidden="true"><span class="balance-line"></span><span class="balance-post"></span><span class="balance-pan pan-left"></span><span class="balance-pan pan-right"></span><span class="balance-dot"></span></div><span class="visual-index">02</span></div>
-            <div class="project-body"><div class="project-meta"><span>MAN Truck &amp; Bus</span><span>Professional work</span></div><h3>CoG &amp; payload analysis</h3><p>Centre-of-gravity calculations, variant configuration and payload distribution, including Z-axis analysis for hydrogen fuel-cell commercial trucks.</p><div class="project-tags"><span>CoG Analysis</span><span>Payload</span><span>Vehicle Integration</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> performed CoG and payload analysis to support vehicle integration validation.</p><p><strong>Evidence to add:</strong> a generic worked example using invented illustrative inputs, clearly labelled as illustrative—not OEM data.</p><p><strong>Results:</strong> project-specific values and validation outcomes are not included in this draft.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-
-          <article class="project-card" data-category="automotive">
-            <div class="project-visual visual-compliance"><span class="visual-label">ENGINEERING CHANGE</span><div class="compliance-art" aria-hidden="true"><span class="comp-ring"></span><span class="comp-check">✓</span><span class="comp-line line-one"></span><span class="comp-line line-two"></span><span class="comp-line line-three"></span></div><span class="visual-index">03</span></div>
-            <div class="project-body"><div class="project-meta"><span>MAN Truck &amp; Bus</span><span>Professional work</span></div><h3>Regulatory compliance &amp; integration</h3><p>Analysed CoG impact from newly integrated parts, reported findings to the project manager and acted as the weight-management contact for a compliance project.</p><div class="project-tags"><span>Compliance</span><span>Component Integration</span><span>Reporting</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> assessed mass-property implications of part integration in a regulatory compliance context.</p><p><strong>Evidence to add:</strong> an anonymized decision workflow or a general engineering-change case study.</p><p><strong>Confidentiality:</strong> omit internal requirements, part identifiers, vehicle data and proprietary documents.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-
-          <article class="project-card" data-category="automotive cad">
-            <div class="project-visual visual-chassis"><span class="visual-label">CHASSIS ENGINEERING</span><div class="chassis-art" aria-hidden="true"><span class="chassis-rail"></span><span class="chassis-cross cross-a"></span><span class="chassis-cross cross-b"></span><span class="chassis-cross cross-c"></span><span class="chassis-wheel ch-wheel-a"></span><span class="chassis-wheel ch-wheel-b"></span></div><span class="visual-index">04</span></div>
-            <div class="project-body"><div class="project-meta"><span>MAN Truck &amp; Bus</span><span>Professional work</span></div><h3>Chassis frame modification support</h3><p>Supported the chassis engineering team on frame modifications for new vehicle projects using CATIA V5, gaining exposure to structural design workflows.</p><div class="project-tags"><span>CATIA V5</span><span>Chassis</span><span>CAD</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> cross-functional support for chassis frame modification work.</p><p><strong>Evidence to add:</strong> a self-created generic frame model or a simplified design workflow.</p><p><strong>Scope:</strong> this entry does not claim sole design ownership or specific structural validation results.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-
-          <article class="project-card" data-category="academic cad simulation">
-            <div class="project-visual visual-gears"><span class="visual-label">BACHELOR'S PROJECT</span><div class="gear-art" aria-hidden="true"><span class="gear gear-large"></span><span class="gear gear-small"></span><span class="gear-center"></span></div><span class="visual-index">05</span></div>
-            <div class="project-body"><div class="project-meta"><span>Academic project</span><span>2021–2022</span></div><h3>Automated gear inspection system</h3><p>Designed an automated inspection system concept to identify defect patterns. Modelled mechanical components and performed structural/load calculations and FEM analysis.</p><div class="project-tags"><span>CATIA V5</span><span>SolidWorks</span><span>ANSYS Workbench</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> mechanical component modelling, engineering calculations and FEM validation work.</p><p><strong>Evidence to add:</strong> report, CAD screenshots, simulation setup, boundary conditions and actual results.</p><p><strong>Results:</strong> inspection accuracy, defect-detection performance and prototype status have not been supplied and are not claimed here.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-
-          <article class="project-card" data-category="academic cad">
-            <div class="project-visual visual-pump"><span class="visual-label">MECHANICAL DESIGN</span><div class="pump-art" aria-hidden="true"><span class="pump-base"></span><span class="pump-cylinder"></span><span class="pump-head"></span><span class="pump-plunger plunger-a"></span><span class="pump-plunger plunger-b"></span><span class="pump-plunger plunger-c"></span></div><span class="visual-index">06</span></div>
-            <div class="project-body"><div class="project-meta"><span>Mecathon Engineering</span><span>Jul–Sep 2021</span></div><h3>Multi-plunger positive displacement pump</h3><p>Design internship work involving 3D component models, 2D technical drawings and SolidWorks part assemblies.</p><div class="project-tags"><span>SolidWorks</span><span>3D Modelling</span><span>Technical Drawings</span></div><details><summary>Case study details</summary><div class="details-content"><p><strong>CV-supported contribution:</strong> contributed to design and development and created component models, drawings and assemblies.</p><p><strong>Evidence to add:</strong> a public-safe assembly screenshot, drawing excerpt with identifying details removed, or recreated generic pump model.</p><p><strong>Results:</strong> no performance testing or manufacturing outcome is claimed in this draft.</p></div></details><span class="status-note">Evidence pending</span></div>
-          </article>
-        </div>
-        <p id="no-projects" class="no-projects" hidden>No projects match this filter.</p>
-        <div class="inventory-note"><strong>Portfolio integrity note</strong><p>These six entries are workstreams identified from the CV, not necessarily six independent projects. The four MAN entries may overlap within the same projects. Detailed evidence and results are pending.</p></div>
-      </div>
-    </section>
-
-    <section id="experience" class="section section-light">
-      <div class="container">
-        <div class="section-heading section-heading-light">
-          <div><p class="eyebrow eyebrow-dark">03 / Experience</p><h2>Professional journey</h2></div>
-          <p class="section-intro">Responsibilities and progression as described in my CV.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item"><div class="timeline-date">APR 2023 — JUL 2025</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Vehicle Integration Engineer</h3><p class="timeline-org">MAN Truck &amp; Bus Pvt. Ltd. · Pune, India</p><ul><li>Managed quarterly weight compliance checks for 15+ commercial truck variants across four concurrent projects.</li><li>Promoted from Graduate Trainee Engineer to Vehicle Integration Engineer within one year.</li><li>Handled CoG calculations and variant configuration using a variant management tool.</li><li>Served as the weight-management contact for a regulatory compliance project.</li><li>Supported chassis engineering with frame modification work in CATIA V5.</li><li>Presented vehicle weight and CoG analyses to engineering leadership in a global OEM environment.</li></ul></div></article>
-          <article class="timeline-item"><div class="timeline-date">JUL 2021 — SEP 2021</div><div class="timeline-marker"></div><div class="timeline-content"><h3>Design Intern</h3><p class="timeline-org">Mecathon Engineering Pvt. Ltd. · India</p><ul><li>Contributed to design and development of multi-plunger positive displacement pumps.</li><li>Created 3D models and 2D technical drawings in SolidWorks.</li><li>Assembled components and checked fit and alignment.</li></ul></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section section-midnight">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">04 / Capabilities</p><h2>Tools &amp; skills</h2></div>
-          <p class="section-intro">Skill names and learning status follow the CV. This site does not assign unsupported proficiency ratings.</p>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-panel"><div class="skill-icon">⌘</div><h3>CAD &amp; design</h3><div class="skill-pills"><span>CATIA V5</span><span>SolidWorks</span><span>AutoCAD</span></div></article>
-          <article class="skill-panel"><div class="skill-icon">◈</div><h3>Simulation</h3><div class="skill-pills"><span>ANSYS Workbench</span><span>Altair HyperMesh</span><span>Abaqus CAE <em>Learning</em></span></div></article>
-          <article class="skill-panel"><div class="skill-icon">▤</div><h3>Engineering &amp; PLM</h3><div class="skill-pills"><span>Windchill</span><span>ELANIS (Change Management)</span><span>EZIS</span><span>GD&amp;T</span></div></article>
-          <article class="skill-panel"><div class="skill-icon">{ }</div><h3>Programming &amp; productivity</h3><div class="skill-pills"><span>Excel VBA</span><span>Microsoft Excel</span><span>Word</span><span>PowerPoint</span><span>Python <em>Academic projects</em></span><span>MATLAB <em>Learning</em></span><span>Enterprise Architect <em>Learning</em></span></div></article>
-          <article class="skill-panel"><div class="skill-icon">◎</div><h3>Engineering focus</h3><div class="skill-pills"><span>Vehicle integration</span><span>Weight management</span><span>CoG analysis</span><span>Payload analysis</span><span>FEM analysis</span><span>CAD modelling</span><span>GD&amp;T</span></div></article>
-          <article class="skill-panel"><div class="skill-icon">文</div><h3>Languages</h3><div class="language-row"><span>English</span><strong>C1</strong></div><div class="language-row"><span>German</span><strong>A1 · improving</strong></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section section-light">
-      <div class="container">
-        <div class="section-heading section-heading-light">
-          <div><p class="eyebrow eyebrow-dark">05 / Education</p><h2>Education &amp; certifications</h2></div>
-        </div>
-        <div class="education-grid">
-          <article class="education-card"><span class="edu-date">OCT 2025 — PRESENT</span><div class="edu-symbol">MSc</div><h3>M.Sc. Advanced Engineering &amp; Engineering Management</h3><p>South Westphalia University of Applied Sciences · Soest, Germany</p><div class="tag-list"><span>Lean Manufacturing</span><span>Project Management</span><span>Systems Engineering</span></div></article>
-          <article class="education-card"><span class="edu-date">AUG 2018 — JUN 2022</span><div class="edu-symbol">B.E.</div><h3>Bachelor of Engineering in Mechanical Engineering</h3><p>Dr. D. Y. Patil Institute of Engineering, Management and Research · Pune, India</p><div class="education-result">Final grade: <strong>8.96 CGPA</strong></div></article>
-        </div>
-        <div class="cert-section"><h3>Certifications</h3><div class="cert-grid"><article class="cert-card"><span class="cert-mark">GD&amp;T</span><div><h4>Geometric Dimensioning &amp; Tolerancing (GD&amp;T) — CAD</h4><p>Infield Technologies · 2020</p></div></article><article class="cert-card"><span class="cert-mark">CAD</span><div><h4>Product Design &amp; Analysis Certification</h4><p>CATIA, ANSYS, HyperMesh · Issuer/date details to confirm</p></div></article></div></div>
-      
-<article class="cert-card">
-  <span class="cert-mark">GD&amp;T</span>
-  <h4>Geometric Dimensioning &amp; Tolerancing</h4>
-  <p>Infield Technologies</p>
-  <a href="Certificate for Mr. Pratik Maligouda for _GD&T Session 2 Certificate ..._" target="_blank" rel="noopener">
-    View Certificate ↗
-  </a>
-  <a href="certificates/Certificate for Mr. Pratik Maligouda for _GD&T Session 2 Certificate ..._" download>
-    Download PDF
-  </a>
-</article>
-
-<article class="cert-card">
-  <span class="cert-mark">CAD</span>
-  <h4>Product Design &amp; Analysis</h4>
-  <p>ANSYS, CATIA and HyperMesh</p>
-  <a href="Ansys_Certificate" target="_blank" rel="noopener">
-    View Certificate ↗
-  </a>
-  <a href="Ansys_Certificate" download>
-    Download PDF
-  </a>
-
-  <a href="CATIA_Certificate" target="_blank" rel="noopener">
-    View Certificate ↗
-  </a>
-  <a href="CATIA_Certificate" download>
-    Download PDF
-  </a>
-
-<a href="Hypermesh_Certificate" target="_blank" rel="noopener">
-    View Certificate ↗
-  </a>
-  <a href="Hypermesh_Certificate" download>
-    Download PDF
-  </a>
-  
-</article>
-
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="container contact-wrap">
-        <div><p class="eyebrow">06 / Contact</p><h2>Let's talk engineering.</h2><p class="contact-lead">Interested in mechanical design, vehicle integration, CAD or simulation opportunities? Feel free to connect.</p></div>
-        <div class="contact-card">
-          <div class="contact-line"><span class="contact-icon">@</span><div><small>Email</small><a href="mailto:pratikmaligouda@gmail.com">pratikmaligouda@gmail.com</a></div></div>
-          <div class="contact-line"><span class="contact-icon">in</span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/pratik-maligouda-b30874176/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pratik-maligouda-b30874176</a></div></div>
-          <p class="privacy-note">Public contact details only. Home address and date of birth have intentionally been excluded. Add a phone number only if you want it publicly visible.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container footer-wrap"><a class="brand brand-footer" href="#home"><span class="brand-mark">PM</span><span>Pratik Maligouda<span class="brand-sub">Mechanical Engineering</span></span></a><p>Built from CV information · Project evidence pending where noted.</p><a href="#home" class="back-top">Back to top ↑</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Pratik Maligouda</span><span>Designed for clarity, accuracy and engineering detail.</span></div></footer>
-</body>
-</html>
+<header><div class="wrap nav"><a class="brand" href="#top">PM<span>.</span> ENGINEERING</a><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#method">Method</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap">
+<div class="kicker">Mechanical Engineering Portfolio · Germany</div>
+<h1>Engineering ideas into practical solutions.</h1>
+<p class="lead">Mechanical engineer focused on vehicle integration, mass-property analysis, CAD-based design and simulation-supported engineering decisions.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore selected work ↓</a><a class="btn" href="Pratik_Maligouda_Tesla_Mechanical_Engineering_Portfolio.pdf">Download PDF portfolio ↗</a><a class="btn" href="mailto:pratikmaligouda@gmail.com">Contact</a></div>
+<div class="metrics"><div class="metric"><strong>2+ years</strong><span>Vehicle integration experience</span></div><div class="metric"><strong>15+ variants</strong><span>Recurring weight-compliance checks</span></div><div class="metric"><strong>3 case studies</strong><span>Professional + academic design work</span></div></div>
+</div></section>
+<section id="about"><div class="wrap two"><div><div class="kicker">01 / About</div><h2>Structured problem-solving.</h2></div><div><p>I am currently pursuing an M.Sc. in Advanced Engineering &amp; Engineering Management at South Westphalia University of Applied Sciences. My experience includes commercial-vehicle integration at MAN Truck & Bus India and mechanical design work involving CAD models, technical drawings and FEM analysis.</p><p>I try to connect requirements to measurable checks: define the system boundary, identify constraints and loads, make assumptions explicit, calculate expected behaviour, and compare results with analysis or test evidence.</p><p class="small">This portfolio is being developed from CV-supported facts. The gear-defect project now includes CAD and FEA screenshots from the original 2021–22 report. Reported calculation values are identified as documented estimates, and FEA output labels are flagged for verification.</p></div></div></section>
+<section id="projects"><div class="wrap"><div class="section-head"><div><div class="kicker">02 / Selected work</div><h2>Three engineering case studies.</h2></div><p>Each project is presented through the engineering problem, my contribution, the method, evidence and limitations. Add approved images in the indicated locations.</p></div>
+<div class="grid">
+<article class="card"><div class="num">01 / PROFESSIONAL EXPERIENCE</div><div class="meta">MAN Truck & Bus India · Apr 2023–Jul 2025</div><h3>Vehicle integration & mass-property analysis</h3><p>Supported weight-compliance checks across 15+ commercial-vehicle variants and four concurrent projects. Work included centre-of-gravity, payload and axle-load evaluations, variant configuration, component-integration impact assessment and CATIA V5 chassis-frame modification support.</p><div class="tags"><span class="tag">CATIA V5</span><span class="tag">CoG analysis</span><span class="tag">Excel VBA</span><span class="tag">Windchill PLM</span></div>
+<figure><div class="figure-placeholder">ADD APPROVED / ANONYMIZED IMAGE<br>Generic vehicle mass-property diagram or self-created layout</div><figcaption>Figure 1. Use a generic or approved visual. Do not publish confidential OEM drawings or vehicle data.</figcaption></figure>
+<details class="details"><summary>Engineering method & evidence checklist</summary><ul><li>Define the vehicle configuration and reference coordinate system.</li><li>Collect component mass and position from approved sources.</li><li>Calculate combined mass and centre of gravity using mass-weighted coordinates.</li><li>Check payload/axle-load implications and record configuration assumptions.</li><li>Add a verified example calculation or a clearly labelled illustrative one.</li></ul><div class="formula">z<sub>CG</sub> = Σ(m<sub>i</sub> z<sub>i</sub>) / Σm<sub>i</sub></div></details></article>
+<article class="card"><div class="num">02 / ACADEMIC PROJECT</div><div class="meta">Jul 2021–Apr 2022 · CATIA V5 / SolidWorks / ANSYS</div><h3>Automated gear inspection system</h3><p>Designed a mechanical system concept to help identify defect patterns in manufactured gears. Modelled mechanical components, performed structural/load calculations based on engineering specifications and conducted FEM analysis in ANSYS Workbench.</p><div class="tags"><span class="tag">CAD modelling</span><span class="tag">Load calculations</span><span class="tag">ANSYS Workbench</span><span class="tag">FEM</span></div>
+<figure><img src="assets/gear_detection_cad_assembly.png" alt="CAD assembly of a gear defect detection conveyor system"><figcaption>Figure 2. CAD assembly from the 2021–22 project report: frame, conveyor belt and gear-handling area.</figcaption></figure>
+<p><b>Documented design calculations:</b> belt speed 0.01571 m/s; calculated belt pull 10.755 N; estimated conveyor drive power 0.1689 W; frame bending stress 14.06 N/mm² under the report's stated assumptions.</p>
+<figure><img src="assets/gear_detection_fea_results_review.png" alt="Finite element output screenshots reproduced from the original project report"><figcaption>Figure 3. FEA output screenshots from the report. The headings and result legends appear inconsistent with each other, so numerical deformation/stress results should not be quoted until checked against the original ANSYS project.</figcaption></figure>
+<details class="details"><summary>Engineering method & limitations</summary><ul><li>Problem: inspect high-volume manufactured gears for visible defects.</li><li>Concept: camera-based image acquisition, conveyor, supporting frame and separator for defective gears.</li><li>Report calculations cover conveyor speed, belt pull, drive power, belt length, frame bending and separator torque.</li><li>FEA boundary conditions documented: fixed support, 1 kg object load (9.81 N) and standard gravity (9.81 m/s²).</li><li>CAD design is documented; the report does not provide verified inspection accuracy or a clear completed test result.</li></ul><p class="small">The report contains assumptions and some inconsistencies that should be reviewed before using the figures as validated design results. Do not claim a validated prototype or inspection performance from this report alone.</p></details></article>
+<article class="card"><div class="num">03 / INDUSTRY INTERNSHIP</div><div class="meta">Mecathon Engineering · Jul–Sep 2021</div><h3>Multi-plunger positive displacement pump</h3><p>Contributed to pump design and development by creating SolidWorks 3D component models, 2D technical drawings and part assemblies, checking fit and alignment across components.</p><div class="tags"><span class="tag">SolidWorks</span><span class="tag">3D modelling</span><span class="tag">2D drawings</span><span class="tag">Assembly fit</span></div>
+<figure><div class="figure-placeholder">ADD PUMP ASSEMBLY SCREENSHOT<br>Exploded view or assembled model</div><figcaption>Figure 3. Pump assembly — use a screenshot from your project files.</figcaption></figure>
+<details class="details"><summary>Drawing and design evidence</summary><ul><li>Exploded assembly with components identified.</li><li>Part model highlighting design features.</li><li>2D drawing excerpt with dimensions and relevant tolerances.</li><li>Brief explanation of fit, alignment and manufacturability.</li></ul><p class="small">Do not state flow rate, pressure, efficiency or test performance without evidence.</p></details></article>
+<article class="card"><div class="num">HOW I WORK</div><div class="meta">Repeatable engineering process</div><h3>From requirement to validation</h3><p>A good engineering decision is traceable. I aim to show not only the final model or contour plot, but also the inputs and assumptions behind it.</p><div class="tags"><span class="tag">Requirements</span><span class="tag">CAD</span><span class="tag">Calculations</span><span class="tag">Validation</span></div><details class="details" open><summary>Checklist</summary><ul><li>What must the design do?</li><li>Which loads, dimensions and material properties govern it?</li><li>What simplified calculation checks the order of magnitude?</li><li>Are CAD constraints and interfaces represented correctly?</li><li>Does simulation/test evidence meet a defined criterion?</li><li>What are the limitations?</li></ul></details></article>
+</div></div></section>
+<section id="method"><div class="wrap"><div class="kicker">03 / First principles</div><h2>Show the reasoning, not just the result.</h2><div class="two"><div><p>For a component-level structural check, begin with a free-body diagram, establish equilibrium, identify the load path, and estimate the dominant stress or deflection before relying on FEA. Then compare the simplified model with the simulation setup and document where the assumptions differ.</p><p>For vehicle mass properties, use consistent coordinates and verified component data. Check the effect of configuration changes rather than relying on a single headline number.</p></div><div class="panel"><h3>What every calculation should contain</h3><ul><li>Known inputs and their source</li><li>Assumptions and units</li><li>Governing equation</li><li>Substitution and result</li><li>Engineering interpretation</li><li>Limitations / validation plan</li></ul></div></div><div class="notice"><b>Integrity note:</b> any generic example must be labelled illustrative. Do not present illustrative numbers as MAN, Tesla or project results.</div></div></section>
+<section id="skills"><div class="wrap"><div class="kicker">04 / Capabilities</div><h2>Tools & engineering focus.</h2><div class="skill-grid"><div class="skill"><h3>CAD & design</h3><p>CATIA V5 · SolidWorks · AutoCAD · 3D modelling · Engineering drawings</p></div><div class="skill"><h3>Analysis</h3><p>Vehicle weight and CoG analysis · Payload/axle-load evaluation · Structural calculations · FEM</p></div><div class="skill"><h3>Engineering systems</h3><p>Excel VBA · Windchill PLM · Variant configuration · Technical documentation · Cross-functional support</p></div></div><p class="small">List only tools and proficiency levels that accurately reflect your current experience.</p></div></section>
+<section id="contact"><div class="wrap two"><div><div class="kicker">05 / Contact</div><h2>Let's talk engineering.</h2><p>Interested in mechanical design, vehicle integration, CAD and simulation-supported development.</p></div><div><p><b>Email</b><br><a href="mailto:pratikmaligouda@gmail.com">pratikmaligouda@gmail.com</a></p><p><b>LinkedIn</b><br><a href="https://www.linkedin.com/in/pratik-maligouda-b30874176/">linkedin.com/in/pratik-maligouda-b30874176</a></p><p><b>Current portfolio</b><br><a href="https://pratikmaligouda.github.io/Pratikmaligouda_portfolio/">pratikmaligouda.github.io/Pratikmaligouda_portfolio</a></p></div></div></section>
+</main>
+<footer><div class="wrap"><div class="kicker">Pratik Maligouda</div><h3>Mechanical Design · Vehicle Integration</h3><p class="muted">A technical portfolio built around traceable reasoning, accurate evidence and clear communication.</p><p class="muted small">Replace all screenshot placeholders before sharing. Confirm that every project result and image is approved for external disclosure.</p></div></footer>
+</body></html>
